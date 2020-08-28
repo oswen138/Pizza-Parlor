@@ -3,8 +3,8 @@
 function PizzaOrder() {
   this.grandTotal = grandTotal,
   this.sauce = []
-  this.toppings = []
-  this.size = []
+  this.toppings = 
+  this.size = 0
   this.saucePrice = 0
   this.toppingPrice = 0
 }
@@ -52,13 +52,20 @@ PizzaOrder.prototype.Total = function() {
 
 //display pizzaBalance
 function displayPizzaBalance(pizzaBalance) {
-  $("#balance").text(currentBalance);
+  $("#balance").text(pizzaBalance);
 }
 
 //UI Logic for PizzaOrder ------------
 
 $(document).ready(function() {
   let pizzaOrder = new PizzaOrder;
+
+  //user selects size
+  $(".size").click(function() {
+		let size = event.target.id;
+		pizza.addSize(size);
+	});
+
 
   $("form#formOne").click(function(event) {
     event.preventDefault();
@@ -77,7 +84,14 @@ $(document).ready(function() {
 }); 
 
 
+$(document).ready(function() {
+  attachListeners();
 
+  let playerOne = new Player();
+  let playerTwo = new Player();
+  playerGroup.addPlayer(playerOne);
+  playerGroup.addPlayer(playerTwo);
+});
 
  
 
