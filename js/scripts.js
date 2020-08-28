@@ -1,13 +1,53 @@
-//Pizza Constructor
+//Business Logic for PizzaOrder ---------
 
-function pizzaSquare() {
-  this.toppings = [];
+function PizzaOrder() {
+  this.grandTotal = [],
+  this.sauce = 0
+  this.toppings = 0
   this.size = 0
-  this.toppingsPrice = 0;
-  this.grandTotal = 0;
 }
 
-//prototype method to call on topping objects
+//Select size of pizza
+PizzaOrder.prototype.addSize = function(size) {
+  this.size = size;
+}
+
+//Select sauce to put on pizza
+PizzaOrder.prototype.addSauce = function(sauce) {
+  this.sauce = sauce;
+  if (this.sauce == "")
+}
+
+
+
+PizzaOrder.prototype.addChoice = function(choice) {
+  choice.id = this
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  this.sauce = 0
+  this.toppings = 0
+  this.size = 0
+}
+
 pizzaSquare.prototype.addToppings = function(topping) {
   topping.price = this.assignPrice();
   this.toppings.push(topping);
