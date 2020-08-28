@@ -12,38 +12,38 @@ A website created with HTML, CSS, and Javascript where a user can customize thei
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program collects answers through a form** | User input: "pants" | Output: "pants" |
-| **Program Removes Spaces from User Input**| User Input: "pants pants" | Output: "pantspants" |
-| **Program Removes Punctuation from User Input**| Input: "p#an^t@s  /p(ant%s" | Output: "pantspants" |
-| **Program Assigns Characters Numeric Values** | Input: "pants" | Output: "3 1 1 1 1" |
-| **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
+| **User selects pizza size** | small | $8.00 |
+| | medium | $12.00 |
+| | Large | $18.00 |
+| **User selects non-default cheese**| Cheddar | $0.50 |
+| **User selects toppings** | 1 topping | $0.00 |
+| | 2 toppings | $1.00 |
 
 ## Setup/Installation Requirements
 
-1. To run this program, you must have a C# compiler. I use [Mono](http://www.mono-project.com).
-2. Install the [Nancy](http://nancyfx.org/) framework to use the view engine. Follow the link for installation instructions.
-3. Clone this repository.
-4. Open the command line--I use PowerShell--and navigate into the repository. Use the command "dnx kestrel" to start the server.
-5. On your browser, navigate to "localhost:5004" and enjoy!
+1. Click github link https://github.com/oswen138/Pizza-Parlor.git
+2. Clone or Download file by clicking green button labeled code.
+3. Navigate to downloaded files and unzip.
+4. Open folder named pizza-parlor to access index.html.
+5. Open index.html on preferred text editor. 
 
 ## Known Bugs
 * No known bugs at this time.
 
 ## Technologies Used
-* C#
-  * Nancy framework
-  * Razor View Engine
-  * ASP.NET Kestrel HTTP server
-  * xUnit
-
+* Javascript
 * HTML
+* CSS
+* jQuery
+* images found from pixabay.com
+* icons found from flaticon.com
 
 ## Support and contact details
 
-_Email no one with any questions, comments, or concerns._
+_Email ophelia.swen@gmail.com for any questions, comments, or concerns._
 
 ### License
 
-*{This software is licensed under the MIT license}*
+*This software is licensed under the MIT license*
 
-Copyright (c) 2017 **_{Marilyn Carlin, David Wilson}_**
+Copyright (c) 2020 **Ophelia Swen**
