@@ -94,7 +94,18 @@ stores.forEach(function(store) {
 // User Interface Logic ---------
 let pizzaSquare = new PizzaSquare();
 
+function displaytoppingDetails(toppingsToDisplay) {
+}
+function attachPizzaListeners() {
+$("ul#contacts").on("click", "li", function() {
+  console.log("The id of this <li> is " + this.id + ".");
+});
+};
+
+
+
 $(document).ready(function() {
+  attachContactListeners();  
   $("form#formOne").submit(function(event) {
     event.preventDefault();
     const size = $("#size").val();
@@ -102,6 +113,7 @@ $(document).ready(function() {
     const topping = $("#topping").val();
     let pizzaPrice = new pizzaPrice(size, sauce, topping);
    pizzaSquare.addTopping(newTopping);
+   displayContactDetails(addressBook);  
     console.log(pizzaSquare.price);
   });
 });
