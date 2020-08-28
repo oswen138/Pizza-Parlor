@@ -17,6 +17,41 @@ pizzaSquare.prototype.assignPrice = function() {
   return this.toppingsPrice;
 }
 
+
+//Business Logic for Toppings 
+function Toppings() {
+  this.toppings = [];
+  this.toppingsPrice = 0;
+}
+pizzaSquare.prototype.addToppings = function(topping) {
+  topping.price = this.assignPrice();
+  this.toppings.push(topping);
+}
+pizzaSquare.prototype.assignPrice = function() {
+  this.toppingsPrice +=1;
+  return this.toppingsPrice;
+}
+//Business Logic for Pizza
+function Pizza() {
+  this.grandTotal = grandTotal;
+}
+
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+}
+
+
+
+pizzaSquare.prototype.findTopping = function(price) {
+  for (let i=0; i< this.toppings.length; i++) {
+      if (this.toppings[i].price == price) {
+        return this.toppings[i];
+      }
+    };
+  return false;
+}
+
+
 function Topping(mushroom, salami, bacon) {
   this.mushroomTopping = mushroomTopping;
   this.salamiTopping = salamiTopping;
@@ -56,3 +91,19 @@ stores.forEach(function(store) {
     this.toppings.push(topping);
   }
 
+// User Interface Logic ---------
+let pizzaSquare = new PizzaSquare();
+
+$(document).ready(function() {
+  $("form#formOne").submit(function(event) {
+    event.preventDefault();
+    const size = $("#size").val();
+    const sauce= $("#sauce").val();
+    const topping = $("#topping").val();
+    let pizzaPrice = new pizzaPrice(size, sauce, topping);
+   pizzaSquare.addTopping(newTopping);
+    console.log(pizzaSquare.price);
+  });
+});
+
+const beverage = $("#beverage").val();
