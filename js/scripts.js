@@ -46,23 +46,30 @@ PizzaOrder.prototype.addTopping = function(topping) {
 //Calculate total cost of pizza
 PizzaOrder.prototype.countTotal = function() {
   this.grandTotal = this.saucePrice + this.toppingPrice;
-  this.showTotal();
+  this.showPizza();
 }
 
 //UI Logic for PizzaOrder ------------
 
 $(document).ready(function() {
-  attachContactListeners();  
+  let grandTotal = new PizzaOrder();
+
+  function display
+
+
+
+
   $("form#formOne").submit(function(event) {
     event.preventDefault();
     const size = $("#size").val();
     const sauce= $("#sauce").val();
     const topping = $("#topping").val();
 
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-phone-number").val("");
+    $("#size").val("");
+    $("sauce").val("");
+    $("topping").val("");
 
+    let newPizzaOrder = new
     let pizzaPrice = new pizzaPrice(size, sauce, topping);
    pizzaSquare.addTopping(newTopping);
    displayContactDetails(addressBook);  
