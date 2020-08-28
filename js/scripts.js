@@ -96,13 +96,24 @@ let pizzaSquare = new PizzaSquare();
 
 function displaytoppingDetails(toppingsToDisplay) {
 }
+
+//does tomsh
 function attachPizzaListeners() {
-$("ul#contacts").on("click", "li", function() {
+$("ul#pizzaSquare").on("click", "li", function() {
   console.log("The id of this <li> is " + this.id + ".");
 });
 };
 
-
+//showOrder(orderId) {
+  const order = pizzaSquare.findOrder(orderID);
+  $('#show-order").show();
+  $(".pizza-size").html(order.pizzaSize);
+  $(".pizza-sauce").html(order.pizzaSauce);
+  $(".pizza-topping").html(order.pizzaTopping);
+  let buttons = $("#buttons");
+  buttons.empty();
+  buttons.append("<button class='deleteButton' id=" + order.id+">Delete</button>");
+}
 
 $(document).ready(function() {
   attachContactListeners();  
@@ -111,11 +122,32 @@ $(document).ready(function() {
     const size = $("#size").val();
     const sauce= $("#sauce").val();
     const topping = $("#topping").val();
+
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
+    $("input#new-phone-number").val("");
+
     let pizzaPrice = new pizzaPrice(size, sauce, topping);
    pizzaSquare.addTopping(newTopping);
    displayContactDetails(addressBook);  
-    console.log(pizzaSquare.price);
+   
   });
 });
 
 const beverage = $("#beverage").val();
+
+function displayCurrentBalance(currentBalance) {
+  $("#balance").text(currentBalance);
+}
+
+
+$("form#pizza-order").submit(function(event) {
+  event.preventDefault();
+
+  const sauce = parseFloat($("#sauce").val());
+  const topping = parseFloat($("#topping").val());
+
+  currentOrder = order(currentOrder);
+  displayCurrentOrder(currentOrder);
+});
+});
