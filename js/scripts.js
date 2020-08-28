@@ -2,9 +2,10 @@
 
 function PizzaOrder() {
   this.grandTotal = [],
-  this.sauce = 0
+  this.sauce = [];
   this.toppings = 0
   this.size = 0
+  this.saucePrice = 0
 }
 
 //Select size of pizza
@@ -15,14 +16,45 @@ PizzaOrder.prototype.addSize = function(size) {
 //Select sauce to put on pizza
 PizzaOrder.prototype.addSauce = function(sauce) {
   this.sauce = sauce;
-  if (this.sauce == "")
+  if (this.sauce === (sauces === 1)) {
+      this.saucePrice = 1;
+  } else if (this.sauce === (sauces === 2)) {
+      this.saucePrice = 2;
+  } else if (this.sauce === (sauces === 3)) {
+      this.saucePrice = 3;
+  } else {
+      this.saucePrice = 0;
+  }
+  this.countTotal();
+}
+
+//Select topping to put on pizza
+PizzaOrder.prototype.addTopping = function(topping) {
+  this.topping = topping;
+  if (this.topping === (toppings === 1)) {
+      this.toppingPrice = 1;
+  } else if (this.topping === (toppings === 2)) {
+      this.toppingPrice = 2;
+  } else if (this.topping === (toppings === 3)) {
+      this.toppingPrice = 3;
+  } else {
+      this.toppingPrice = 0;
+  }
+  this.countTotal();
+}
+
+//Push selections into grandTotal array
+PizzaOrder.prototype.addgrandTotal = function(sauce, topping) {
+  this.grandTotal.push();
 }
 
 
+stores.forEach(function(store) {
+  console.log(store.name + " sells:");
+  store.products.forEach(function(product) {
+    console.log(product.name);
+  });
 
-PizzaOrder.prototype.addChoice = function(choice) {
-  choice.id = this
-}
 
 
 
