@@ -1,15 +1,21 @@
 //Pizza Constructor
 
-function Pizza() {
-  this.toppings
-  this.size =
-  this.price = 
+function pizzaSquare() {
+  this.toppings = [];
+  this.size = 0
   this.toppingsPrice = 0;
   this.grandTotal = 0;
 }
 
-
 //prototype method to call on topping objects
+pizzaSquare.prototype.addToppings = function(topping) {
+  topping.price = this.assignPrice();
+  this.toppings.push(topping);
+}
+pizzaSquare.prototype.assignPrice = function() {
+  this.toppingsPrice +=1;
+  return this.toppingsPrice;
+}
 
 function Topping(mushroom, salami, bacon) {
   this.mushroomTopping = mushroomTopping;
@@ -29,4 +35,24 @@ stores.forEach(function(store) {
     console.log(product.name);
   });
 
+
+  function AddressBook() {
+    this.contacts = [];
+  }
+  
+  function Contact(firstName, lastName, phoneNumber) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phoneNumber = phoneNumber;
+  }
+  
+  Contact.prototype.fullName = function() {
+    return this.firstName + " " + this.lastName;
+  }
+
+  //Business Logic for Pizza
+  
+  Pizza.prototype.addToppings = function(topping) {
+    this.toppings.push(topping);
+  }
 
