@@ -13,43 +13,42 @@
     <p class="lead">Fresh sauces, cheese, and scrumptious crusts await!</p>
   </div>
 
-<div class="container-fluid Start">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="container-fluid">
-        <h1>Start your Pizza</h1>
-        <br>
-        <h2>Select Pizza Size to Order</h2>
-        <div class="container-fluid ">
-        <h3>Choose your pizza size:</h3>
-          <button class="smallSize" id="msmall">12"</button>
-          <button class="mediumSize" id="medium">12"</button>
-          <button class="largeSize" id="large">14"</button>
-
-
-
-          <body>
-            <h1>Address Book</h1>
-            <h2>Add a Contact:</h2>
-            <form id="new-contact">
-              <label for="new-first-name">First Name</label>
-              <input type="text" id="new-first-name">
-              <label for="new-last-name">Last Name</label>
-              <input type="text" id="new-last-name">
-              <label for="new-phone-number">Phone Number</label>
-              <input type="text" id="new-phone-number">
-              <button type="submit">Add</button>
-            </form>
-          
-            <h2>Contacts:</h2>
-            <ul id="contacts">
-            </ul>
-          
-            <div id="show-contact">
-              <p>First Name: <span class="first-name"></span></p>
-              <p>Last Name: <span class="last-name"></span></p>
-              <p>Phone Number: <span class="phone-number"></span></p>
-              <div id="buttons">
+  <div class="container-fluid Start">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container-fluid">
+          <h1>Start your Pizza</h1>
+          <br>
+          <div class="container-fluid ">
+          <h2>Choose your pizza size:</h2>
+            <button class="button button1">Giant 12"</button>
+            <button class="button button2" style="width: 20%; height: 70%;">Medium 14"</button>
+            <button class="button button3" style="width: 40%;">Large 20"</button>
+            
+        <div class="container">
+          <h1>Build your Pizza!</h1>
+          <div>
+            <form id="formOne">
+              <div class="form-group">
+                <h2>Choose your sauce:</h2>
+                <select class="form-control" id="sauce">
+                  <option>Pesto</option>
+                  <option>Creamy Bechamel Sauce</option>
+                  <option>Garlic Ranch Sauce</option>
+                </select>
               </div>
-            </div>
-          </body>
+              <div class="form-group">
+                <h2>Choose your topping:</h2>
+                <select class="form-control" id="topping">
+                  <option>Mushroom</option>
+                  <option>Salami</option>
+                  <option>Bacon</option>
+                </select>
+              </div>
+             <button type="submit" class="btn btn-warning">Bake!</button>
+            </form>
+        </div>
+
+
+
+ 
