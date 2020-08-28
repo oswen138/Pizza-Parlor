@@ -2,10 +2,11 @@
 
 function PizzaOrder() {
   this.grandTotal = grandTotal,
-  this.sauce = 0
-  this.toppings = 0
-  this.size = 0
+  this.sauce = []
+  this.toppings = []
+  this.size = []
   this.saucePrice = 0
+  this.toppingPrice = 0
 }
 
 //Select size of pizza
@@ -52,9 +53,20 @@ PizzaOrder.prototype.countTotal = function() {
 //UI Logic for PizzaOrder ------------
 
 $(document).ready(function() {
-  let grandTotal = new PizzaOrder();
+  let pizzaOrder = new PizzaOrder();
+  $("form#formOne").submit(function(event) {
+    event.preventDefault();
+    const size = $("#size").val();
+    const sauce= $("#sauce").val();
+    const topping = $("#topping").val();
 
-  function display
+    $("#size").val("");
+    $("sauce").val("");
+    $("topping").val("");
+
+  function displayOrderDetails(pizzaOrderToDisplay) {
+    let 
+  }
 
 
 
