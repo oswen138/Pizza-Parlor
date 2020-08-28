@@ -12,10 +12,11 @@ A website created with HTML, CSS, and Javascript where a user can customize thei
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **User selects pizza size** | small | $8.00 |
-| | medium | $12.00 |
+| **User selects pizza size** | Giant Slice | $8.00 |
+| | Medium | $12.00 |
 | | Large | $18.00 |
 | **User selects non-default cheese**| Cheddar | $0.50 |
+| **User selects sauce**| White Garlic Sauce | $0.00 |
 | **User selects toppings** | 1 topping | $0.00 |
 | | 2 toppings | $1.00 |
 

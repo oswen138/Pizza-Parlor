@@ -1,0 +1,21 @@
+.jumbotron {
+  padding-top: 0px;
+  padding-bottom: 0x;
+  margin-bottom: 0px;
+  color: whitesmoke;
+  background-color: rgb(196, 196, 22); 
+} 
+.smallSize {
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  background: #ffd867;
+  border: 10px solid #ffa600;
+  margin: 5px;
+  box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.47);
+
+}
+
+
+
+
