@@ -26,7 +26,7 @@ PizzaOrder.prototype.addSauce = function(sauce) {
   } else {
       this.saucePrice = 0;
   }
-  this.countTotal();
+  this.sauceTotal();
 }
 
 //Select topping to put on pizza
@@ -41,20 +41,26 @@ PizzaOrder.prototype.addTopping = function(topping) {
   } else {
       this.toppingPrice = 0;
   }
-  this.countTotal();
+  this.toppingTotal();
 }
 
 //Calculate total cost of pizza
-PizzaOrder.prototype.countTotal = function() {
-  this.grandTotal = this.saucePrice + this.toppingPrice;
-  this.showPizza();
+PizzaOrder.prototype.Total = function() {
+  this.grandTotal = this.sauceTotal + this.toppingTotal;
+  this.pizzaBalance();
+}
+
+//display pizzaBalance
+function displayPizzaBalance(pizzaBalance) {
+  $("#balance").text(currentBalance);
 }
 
 //UI Logic for PizzaOrder ------------
 
 $(document).ready(function() {
-  let pizzaOrder = new PizzaOrder();
-  $("form#formOne").submit(function(event) {
+  let pizzaOrder = new PizzaOrder;
+
+  $("form#formOne").click(function(event) {
     event.preventDefault();
     const size = $("#size").val();
     const sauce= $("#sauce").val();
@@ -63,34 +69,17 @@ $(document).ready(function() {
     $("#size").val("");
     $("sauce").val("");
     $("topping").val("");
-
-  function displayOrderDetails(pizzaOrderToDisplay) {
-    let 
-  }
-
-
-
-
-  $("form#formOne").submit(function(event) {
-    event.preventDefault();
-    const size = $("#size").val();
-    const sauce= $("#sauce").val();
-    const topping = $("#topping").val();
-
-    $("#size").val("");
-    $("sauce").val("");
-    $("topping").val("");
-
-    let newPizzaOrder = new
-    let pizzaPrice = new pizzaPrice(size, sauce, topping);
-   pizzaSquare.addTopping(newTopping);
-   displayContactDetails(addressBook);  
-   
+    
+    let newPizzaOrder = new PizzaOrder(size, sauce, topping);
+    pizzaBalance = parseInt(sauce)
+    displayPizzaBalance(pizzaBalance);
   });
-});
+}); 
 
 
 
+
+ 
 
 
 
