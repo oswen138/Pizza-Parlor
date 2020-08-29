@@ -1,7 +1,7 @@
 //Business Logic for PizzaOrder ---------
 
 function PizzaOrder() {
-  this.grandTotal = grandTotal,
+  this.grandTotal = 0,
   this.sauce = []
   this.toppings = 
   this.size = 0
@@ -12,6 +12,16 @@ function PizzaOrder() {
 //Select size of pizza
 PizzaOrder.prototype.addSize = function(size) {
   this.size = size;
+  if (this.size === "size1") {
+		this.sizePrice = 10;
+	} else if (this.size === "size2") {
+    this.sizePrice = 15;
+  } else if (this.size === "size3") {
+		this.sizePrice = 20;
+	} else {
+		this.sizePrice = 0;
+	}
+	this.sizeTotal();
 }
 
 //Select sauce to put on pizza
@@ -46,13 +56,13 @@ PizzaOrder.prototype.addTopping = function(topping) {
 
 //Calculate total cost of pizza
 PizzaOrder.prototype.Total = function() {
-  this.grandTotal = this.sauceTotal + this.toppingTotal;
+  this.grandTotal = this.sizeTotal + this.sauceTotal + this.toppingTotal;
   this.pizzaBalance();
 }
 
 //display pizzaBalance
 function displayPizzaBalance(pizzaBalance) {
-  $("#balance").text(pizzaBalance);
+  return this.sizeTotal + this.sauceTotal + this.toppingTotal;
 }
 
 //UI Logic for PizzaOrder ------------
@@ -60,14 +70,7 @@ function displayPizzaBalance(pizzaBalance) {
 $(document).ready(function() {
   let pizzaOrder = new PizzaOrder;
 
-  //user selects size
-  $(".size").click(function() {
-		let size = event.target.id;
-		pizza.addSize(size);
-	});
-
-
-  $("form#formOne").click(function(event) {
+  $("form#formOne").submit(function(event) {
     event.preventDefault();
     const size = $("#size").val();
     const sauce= $("#sauce").val();
@@ -76,24 +79,19 @@ $(document).ready(function() {
     $("#size").val("");
     $("sauce").val("");
     $("topping").val("");
+
+    .size.addEventListener("click", "li", function());
+    .sauce.addEventListener("click", "li", function());
+    .topping.addEventListener("click", "li", function());
     
     let newPizzaOrder = new PizzaOrder(size, sauce, topping);
+    pizzaBalance = parseInt(size)
     pizzaBalance = parseInt(sauce)
+    pizzaBalance = parseInt(topping)
     displayPizzaBalance(pizzaBalance);
   });
 }); 
 
-
-$(document).ready(function() {
-  attachListeners();
-
-  let playerOne = new Player();
-  let playerTwo = new Player();
-  playerGroup.addPlayer(playerOne);
-  playerGroup.addPlayer(playerTwo);
-});
-
- 
 
 
 
