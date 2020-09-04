@@ -18,31 +18,32 @@
       <div class="col-md-6">
         <h1>Start your Pizza</h1>
         <br>
-        <div class="container-fluid ">
+        <div class="container-fluid">
         <h2>Choose your pizza size:</h2>
-        <form id="select-sauce">
-          <button class="button button1" id="size1"">Giant 12"</button>
-          <button class="button button2" id="size2" style="width: 20%; height: 70%;">Medium 14"</button>
-          <button class="button button3" id="size3" style="width: 40%;">Large 20"</button>
-        </form>
-      </div>    
-    </div>
-  </div> 
+        <form id="select-pizza">
+          <div class="form-group">
+            <button class="button button1" id="size1"">Giant 12"</button>
+            <button class="button button2" id="size2" style="width: 20%; height: 70%;">Medium 14"</button>
+            <button class="button button3" id="size3" style="width: 40%;">Large 20"</button>
+          </div>    
+      </div>
+    </div> 
+  </div>  
   <div class="container">
     <h1>Build your Pizza!</h1>
   </div>
   <div class="container">
-    <form id="select-sauce">
+    <div class="form-group">
       <h2>Choose your sauce:</h2>
         <select class="form-control" id="sauces">
           <option value="1" name="1">Pesto</option>
           <option value="2" name="2">Creamy Bechamel Sauce</option>
           <option value="3" name="3">Garlic Ranch Sauce</option>
         </select>
-    </form>  
+    </div>  
   </div>  
   <div class="container">
-    <form id="select-topping">
+    <div class="form-group">
       <h2>Choose your topping:</h2>
         <select class="form-control" id="toppings">
           <option value="1" name="1">Mushroom</option>
@@ -51,17 +52,20 @@
         </select>
         <br>
         <button type="submit" class="btn btn-warning">Bake!</button>
-    </form>
+        </form>  
+    </div>
   </div>  
-  <br>
-  <br>
+  <hr>
+  <h2>Order Summary:</h2>
+  <ul id="order">
+  </ul>
   <div class ="card">
-    <h2>Order Summary:</h2>
-   <div id="show-order">
-    <p>Size: <span class="pizza-size"></span></p>
-    <p>Sauce: <span class="pizza-sauce"></span></p>
-    <p>Topping: <span class="pizza-topping"></span></p>
-    <p>Grand Total: <span class="pizza-topping"></span></p>
-   </div>
+    <div id="show-order">
+     <p>Size: <span class="size-output"></span></p>
+     <p>Sauce: <span class="sauce-output"></span></p>
+     <p>Topping: <span class="topping-output"></span></p>
+     <p>Grand Total: <span class="price-output"></span></p>
+    </div>
+  </div>  
 </body>
 </html>
