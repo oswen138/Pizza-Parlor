@@ -1,12 +1,12 @@
 //Business Logic for PizzaOrder ---------
 
 function PizzaOrder() {
-  this.grandTotal = 0,
-  this.sauce = []
-  this.toppings = 
-  this.size = 0
-  this.saucePrice = 0
-  this.toppingPrice = 0
+  this.grandTotal = 0;
+  this.sauce = [];
+  this.toppings = [];
+  this.size = "";
+  this.saucePrice = 0;
+  this.toppingPrice = 0;
 }
 
 //Select size of pizza
@@ -54,41 +54,38 @@ PizzaOrder.prototype.addTopping = function(topping) {
   this.toppingTotal();
 }
 
-//Calculate total cost of pizza
+//Calculate total cost of pizza and sisplay
 PizzaOrder.prototype.Total = function() {
+  console.log(this.grandTotal);
   this.grandTotal = this.sizeTotal + this.sauceTotal + this.toppingTotal;
-  this.pizzaBalance();
 }
 
-//display pizzaBalance
-function displayPizzaBalance(pizzaBalance) {
-  return this.sizeTotal + this.sauceTotal + this.toppingTotal;
-}
+// //display pizzaBalance
+// function displayPizzaBalance(pizzaBalance) {
+//   return this.sizeTotal + this.sauceTotal + this.toppingTotal;
+// }
 
 //UI Logic for PizzaOrder ------------
 
 $(document).ready(function() {
-  let pizzaOrder = new PizzaOrder;
+  let pizzaorder = new PizzaOrder;
 
   $("form#formOne").submit(function(event) {
     event.preventDefault();
     const size = $("#size").val();
-    const sauce= $("#sauce").val();
-    const topping = $("#topping").val();
+    const sauce= $("#sauces").val();
+    const topping = $("#toppings").val();
 
     $("#size").val("");
-    $("sauce").val("");
-    $("topping").val("");
+    $("#sauce").val("");
+    $("#topping").val("");
 
-    .size.addEventListener("click", "li", function());
-    .sauce.addEventListener("click", "li", function());
-    .topping.addEventListener("click", "li", function());
-    
-    let newPizzaOrder = new PizzaOrder(size, sauce, topping);
-    pizzaBalance = parseInt(size)
-    pizzaBalance = parseInt(sauce)
-    pizzaBalance = parseInt(topping)
-    displayPizzaBalance(pizzaBalance);
+    let pizzaorder = new PizzaOrder(size, sauce, topping);
+    sizeTotal = parseInt(size)
+    sauceTotal = parseInt(sauce)
+    toppingTotal = parseInt(topping)
+    displaygrandTotal(pizzaBalance);
+
   });
 }); 
 
