@@ -132,12 +132,14 @@
 
 
 function showInterface() {
+  event.preventDefault();
+  console.log("asdf");
  
   $(".size-output").text($("#sizes option:selected").text());
   $(".sauce-output").text($("#sauces option:selected").text());
   $(".topping-output").text($("#toppings option:selected").text());
   $(".price-output").text(parseInt($("#sizes option:selected").val())+parseInt($("#toppings option:selected").val())+parseInt($("#sauces option:selected").val()));
-
+  $("#show-order").show();
 }
 
 
