@@ -42,7 +42,7 @@ pizzaOrder.prototype.addSize = function(size) {
 	this.pizzaOrder.push(sizePrice);
 }
 //Select sauce to put on pizza
-PizzaOrder.prototype.addSauce = function(sauce) {
+pizzaOrder.prototype.addSauce = function(sauce) {
   this.sauce = sauce;
   if (this.sauce === (sauces === 1)) {
       this.saucePrice = 1;
@@ -57,7 +57,7 @@ PizzaOrder.prototype.addSauce = function(sauce) {
 }
 
 //Select topping to put on pizza
-PizzaOrder.prototype.addTopping = function(topping) {
+pizzaOrder.prototype.addTopping = function(topping) {
   this.topping = topping;
   if (this.topping === (toppings === 1)) {
       this.toppingPrice = 1;
@@ -83,22 +83,21 @@ function Pizza(pizzaSauce, pizzaTopping, pizzaSize) {
   this.pizzaTopping = pizzaTopping;
 }
 
-Contact.prototype.pizzaPrice = function() {
+pizzaOrder.prototype.pizzaPrice = function() {
   return this.pizzaSize + this.pizzaSauce + this.pizzaTopping + " ";
 }
 
 
 //User Interface Logic ---------
-let pizzaOrder = new pizzaOrder();
 
 //display order info in the DOM
 function displayPizzaDetails(pizzaOrderToDisplay) {
   let orderList = $("ul#order");
-  let htmlForOrderInfo = "";
+  let htmlForPizzaInfo = "";
   pizzaOrderToDisplay.orders.forEach(function(order) {
     htmlForOrderInfo += "<li id=" + order.id + ">" + order.sauces + " " + order.toppings + "</li>";
   });
-  contactsList.html(htmlForContactInfo);
+  orderList.html(htmlForPizzaInfo);
 };
 
 function show() {
