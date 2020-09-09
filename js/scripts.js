@@ -1,4 +1,4 @@
-//Business logic for Order
+// //Business logic for Order
 function pizzaOrder() {
   this.orders = [];
   this.currentId = 0;
@@ -88,9 +88,11 @@ pizzaOrder.prototype.pizzaPrice = function() {
 }
 
 
-//User Interface Logic ---------
+User Interface Logic ---------
 
-//display order info in the DOM
+display order info in the DOM
+
+
 function displayPizzaDetails(pizzaOrderToDisplay) {
   let orderList = $("ul#order");
   let htmlForPizzaInfo = "";
@@ -120,18 +122,14 @@ $(document).ready(function() {
     event.preventDefault();
     const sauces = $("#sauces").val();
     const toppings = $("#toppings").val();
+    const sizes = $("#sizes").val();
 
-    $(".size-output").text();
-    $(".sauce-output").text(sauces);
-    $(".topping-output").text(toppings);
-    $(".price-output").text();
+    $(".size-output").text($("#sizes option:selected").text());
+    $(".sauce-output").text($("#sauces option:selected").text());
+    $(".topping-output").text($("#toppings option:selected").text());
+    $(".price-output").text(parseInt($("#sizes option:selected").val())+parseInt($("#toppings option:selected").val())+parseInt($("#sauces option:selected").val()));
 
-    $("#show-order").show();
-
-    let pizzaOrder = new pizzaOrder(sauces, toppings);
-    pizzaOrder.addPizza(newPizza);
-    displayPizzaDetails(pizzaOrder);
-
+  
   });
 }); 
     
