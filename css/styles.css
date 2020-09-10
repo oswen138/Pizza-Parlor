@@ -27,3 +27,21 @@
 #show-order{
   display: none;
 }
+.pizza1 {
+  width: 56%;
+  height: 56%;
+  display: block;
+  margin: 0 auto;
+}
+.pizza2{
+  width: 56%;
+  height: 56%;
+  display: block;
+  margin: 0 auto;
+}
+.pizza3 {
+  width: 56%;
+  height: 56%;
+  display: block;
+  margin: 0 auto;
+}

@@ -1,70 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Pizza Parlor</title>
-</head>
-<body>
-  <div class="jumbotron">
-    <h1 class="display-4">Jo's Pizza Parlor</h1>
-    <p class="lead">Fresh sauces, cheese, and scrumptious crusts await!</p>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1>Start your Pizza</h1>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Parlor</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4">Jo's Pizza Parlor</h1>
+      <p class="lead">Fresh sauces, cheese, and scrumptious crusts await!</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="form-group">
+          <form id="select-pizza">
+            <h1>Start your Pizza</h1>
+            <br>
+            <h2>Choose your pizza size:</h2>
+          <div class="row">
+             <select class="form-control" id="size">
+               <option value="Tiny">Tiny</option>
+               <option value="Giant">Giant</option>
+               <option value="Monster">Monster</option>
+             </select>
+          </div>
+        </div>
+      </div>     
+      <div class="row">
+         <h2>Choose your sauce:</h2>
+             <select class="form-control" id="sauces">
+               <option value="1" name="sauces">Pesto</option>
+               <option value="2" name="sauces">Creamy Bechamel Sauce</option>
+               <option value="3" name="sauces">Garlic Ranch Sauce</option>
+             </select>
+       </div>
+       <div class="row">
+         <h2>Choose your topping:</h2>
+            <select class="form-control" id="toppings">
+               <option value="1" name="toppings">Mushroom</option>
+               <option value="2" name="toppings">Salami</option>
+               <option value="3" name="toppings">Bacon</option>
+            </select>
+        </div>    
         <br>
-        <div class="container-fluid">
-        <h2>Choose your pizza size:</h2>
-        <form id="select-pizza">
-          <select class="form-control" id="sizes">
-            <option value="10" name="1">Giant 12"</option>
-            <option value="18" name="2">Medium 14"</option>
-            <option value="30" name="3">Large 20"</option>
-          </select>
+        <button type="submit" class="btn btn-warning"">Bake!</button>
+      </form>  
+      <div id= "order-detail">
       </div>
-    </div> 
-  </div>  
-  <div class="container">
-    <h1>Build your Pizza!</h1>
-  </div>
-  <div class="container">
-    <div class="form-group">
-      <h2>Choose your sauce:</h2>
-        <select class="form-control" id="sauces">
-          <option value="1" name="1">Pesto</option>
-          <option value="2" name="2">Creamy Bechamel Sauce</option>
-          <option value="3" name="3">Garlic Ranch Sauce</option>
-        </select>
-    </div>  
-  </div>  
-  <div class="container">
-    <div class="form-group">
-      <h2>Choose your topping:</h2>
-        <select class="form-control" id="toppings">
-          <option value="1" name="1">Mushroom</option>
-          <option value="2" name="2">Salami</option>
-          <option value="3" name="3">Bacon</option>
-        </select>
-        <br>
-        <button type="submit" class="btn btn-warning" onclick="showInterface()">Bake!</button>
-        </form>  
-    </div>
-  </div>  
-  <hr>
-  <h2>Order Summary:</h2>
-  <ul id="order">
-  </ul>
-  <div class ="card">
-    <div id="show-order">
-     <p>Size: <span class="size-output"></span></p>
-     <p>Sauce: <span class="sauce-output"></span></p>
-     <p>Topping: <span class="topping-output"></span></p>
-     <p>Grand Total: <span class="price-output"></span></p>
-    </div>
-  </div>  
-</body>
+  </body>
 </html>
+
+
+
+
+
+
