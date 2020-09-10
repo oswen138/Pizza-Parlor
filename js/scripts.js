@@ -1,5 +1,5 @@
 // Pizza Constructor
-function Pizza(size, toppings, sauces, total) {
+function Pizza(size, toppings, sauces) {
   this.size = size;
   this.toppings = toppings;
   this.sauces = sauces;
@@ -15,27 +15,27 @@ Pizza.prototype.calculate = function() {
   } else if (this.size === "Monster") {
     this.total += 20;
   } else {
-    this.total === 1;
+    this.total += 1;
   }
 
   if (this.toppings === "1") {
-    this.total === 2;
+    this.total += 2;
   } else if (this.toppings === "2") {
-    this.total === 3;
+    this.total += 3;
   } else if (this.toppings === "3") {
-    this.total === 5;
+    this.total += 5;
   } else {
-    this.total === 1;
+    this.total += 1;
   }
 
   if (this.sauces === "1") {
-    this.total === 2;
+    this.total += 2;
   } else if (this.sauces === "2") {
-    this.total === 3;
+    this.total += 3;
   } else if (this.sauces === "3") {
-    this.total === 5;
+    this.total += 5;
   } else {
-    this.total === 1;
+    this.total += 1;
   }
   return this.total;
 };
@@ -56,35 +56,3 @@ $(document).ready(function() {
    
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(".pizza").onclick(function() {
-//   $("#show-order").show();
-//   $(".size-output").text(newPizza.size);
-//   $(".sauce-output").text(newPizza.sauces);
-//   $(".topping-output").text(newPizza.toppings);
-//   $(".price-output").text(cost());
-
-
-
-
-
-
-
-
